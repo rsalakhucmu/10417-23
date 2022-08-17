@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>10-417/617 Fall 2022 : Intermediate Deep Learning</title>
+
+  <!-- bootstrap -->
+  <!-- <link rel="stylesheet" href="./style/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/bootstrap-theme.min.css">
+  <link href="./style/10417.css" rel="stylesheet" type="text/css">
+  <body>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a href="https://andrejristeski.github.io/10417-20/">
+      <img src="./static/ml-logo.gif" style="height:40px; float: left; margin-left: 20px; margin-right: 20px;"></a>
+      <a class="navbar-brand" href="https://andrejristeski.github.io/10707-S20/"><font color="black">CMU-10-417/617</font></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="./index.html#announcement"><font color="black">Announcements</font></a></li>
+        <li class="nav-item"><a class="nav-link" href="./syllabus.html"><font color="black">Schedule/Calendar</font></a></li>
+        <li class="nav-item"><a class="nav-link" href="./calendar.html"><font color="black">TA Office Hours</font></a></li>
+	      <li class="nav-item"><a class="nav-link" href="./index.html#info"><font color="black">Course Outline</font></a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#logistics"><font color="black">Logistics</font></a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#policies"><font color="black">Policies</font></a></li>
+        <li class="nav-item"><a class="nav-link" href="https://piazza.com/class/l6mi83zxni459j"><font color="black">Piazza</font></a></li>
+      </ul>
+    </div>
+  </nav>
+
+ <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+      <h1 class="display-5">10-417/617 - Intermediate Deep Learning, Fall 2022</h1>
+      <h2 class="display-7">Instructor:</h2>
+      <div class="row">
+        <div class="instructor">
+          <a href="http://www.andrew.cmu.edu/user/rsalakhu/">
+            <img class="headshot-instructor" src="./static/photo-ruslan2.jpg" style="text-align:center;">
+            <div style="text-align:left;padding-left: 30px">Ruslan Salakhutdinov</div>
+	  </a>   
+	<p style="padding:5px"> rsalakhu [at] andrew [dot] cmu [dot] edu </p>
+        </div>
+      </div>
+      <br />
+    </div>
+
+  </div>
+
+
+  <section id="info">
+  <div class="container">
+    <h2>Course Outline</h2>
+	  <br />
+
+<p>
+Building intelligent machines that are capable of extracting meaningful representations from data lies at the core of solving many AI related tasks. In the past decade, researchers across many communities, from applied statistics to engineering, computer science and neuroscience, have developed deep models that are composed of several layers of nonlinear processing. An important property of these models is that they can learn useful representations by re-using and combining intermediate concepts, allowing these models to be successfully applied in a wide variety of domains, including visual object recognition, information retrieval, natural language processing, and speech perception. 
+<br> The goal of this course is to introduce students to both the foundational ideas and the recent advances in deep learning. The first part of the course will focus on supervised learning, including neural networks, back-propagation algorithm, convolutional models, recurrent neural networks, and their extensions with applications to image recognition, video analysis, and language modelling. The second part of the course will cover unsupervised learning, including variational autoencoders, sparse-coding, Boltzmann machines, and generative adversarial networks. 
+<br> This course will assume a reasonable degree of mathematical maturity and will require strong programming skills.
+</p>
+
+</div>
+</section>
+
+  
+  <section id="logistics">
+    <div class="container">
+
+    <h2>Logistics</h2>
+	    <br />
+    <dt>Time</dt><dd>Monday, Wednesday 3:05 - 4:25pm, GHC 4307, Panopto link on <a href="https://canvas.cmu.edu/courses/24912/external_tools/4079">Canvas</a>. The lectures will be also recorded, and available under the Cloud Recordings tab in Canvas.  </p> </dd>
+      <dt>Contact Information</dt><dd>If you have a question, to get a response from the teaching staff quickly we strongly encourage you to post it to the class <a href="https://piazza.com/class/l6mi83zxni459j">Piazza forum</a>. For private matters, please make a private note visible only to the course instructors. For longer discussions, we strongly encourage you to come to office hours.
+      </dd>
+    <dt> Remote Student Engagement </dt> 
+    <dd> 
+The remote-only (REO) Section B for this course was created to support students who cannot be on campus due to a government restriction on visas or travel or a documented health issue. To ensure that we are supporting these remote students: 
+<ul>
+<li> Students in the remote section will be included in the course discussion forum, Piazza, to ask and answer questions. </li>
+<li> Remote students will receive feedback on their assignments via marked rubric items in Gradescope, as all students do. </li>
+<li> We encourage students to request office hours by appointment as needed. Please contact the course staff if you need more support in office hours. </li>
+<li> Lectures and recitations will be recorded and made available to students. There may be a delay in posting these recordings while they are processed. </li>
+</ul> 
+    </dd>	    
+	  
+     <dt>Education Associate</dt>
+      <div class="row">
+        <div class="instructor">
+            <img class="headshot" src="static/photo-brynn.jpg" style="text-align:center;">
+            <div style="text-align:center;">Brynn Edmunds</div>
+          </a>
+        </div>
+      </div>
+    <dt>Teaching Assistants</dt>
+      <div class="row">
+        <div class="instructor">
+          <!-- <a href="(website-here)"> -->
+            <img class="headshot" src="./static/photo-michael.jpg" style="text-align:center;">
+            <div style="text-align:center;font-size: 90%;">Michael Agaby</div>
+          <!-- </a> -->
+        </div>
+	      <div class="instructor">
+          <!-- <a href="(website-here)"> -->
+            <img class="headshot" src="./static/photo-tarun.jpg" style="text-align:center;">
+            <div style="text-align:center;font-size: 90%;">Tarun Chiruvolu</div>
+          <!-- </a> -->
+        </div>
+	      <div class="instructor">
+          <!-- <a href="(website-here)"> -->
+            <img class="headshot" src="./static/photo-athiya.jpg" style="text-align:center;">
+            <div style="text-align:center;font-size: 90%;">Athiya Deviyani</div>
+          <!-- </a> -->
+        </div>
+        <div class="instructor">
+          <!-- <a href="(website-here)"> -->
+            <img class="headshot" src="./static/photo-olivier.jpg" style="text-align:center;">
+            <div style="text-align:center;font-size: 90%;">Olivier Filion</div>
+          <!-- </a> -->
+        </div>
+        <div class="instructor">
+          <!-- <a href="(website-here)"> -->
+            <img class="headshot" src="./static/photo-sedrick.jpg" style="text-align:center;">
+            <div style="text-align:center;font-size: 90%;">Sedrick Keh</div>
+          <!-- </a> -->
+        </div>
+        <div class="instructor">
+          <!-- <a href="(website-here)"> -->
+            <img class="headshot" src="./static/photo-anamika.jpg" style="text-align:center;">
+            <div style="text-align:center;font-size: 90%;">Anamika Shekhar</div>
+          <!-- </a> -->
+        </div>
+        <div class="instructor">
+          <!-- <a href="(website-here)"> -->
+            <img class="headshot" src="./static/photo-udaikaran.jpg" style="text-align:center;">
+            <div style="text-align:center;font-size: 90%;">Udaikaran Singh</div>
+          <!-- </a> -->
+        </div>
+     </div>
+	  
+    <dt>Prerequisites </dt>
+    <dd>
+    Students entering the class are expected to have a pre-existing working knowledge of probability, linear algebra, statistics and algorithms, though the class has been designed to allow students with a strong numerate background to catch up and fully participate. 
+    <br>
+    <ul>
+    <li> You need to have, before starting this course, significant experience programming in a general programming language. Specifically, you need to have written from scratch programs consisting of several hundred lines of code. For undergraduate students, this will be satisfied for example by having passed 15-122 (Principles of Imperative Computation) with a grade of ‘C’ or higher, or comparable courses or experience elsewhere.
+    Note: For each programming assignment, we will be using Python.
+    <li> You need to have, before starting this course, basic familiarity with  probability, linear algebra, statistics and algorithms.
+    Any of these courses must be satisfied to take the course: 10301 or 10315 or 10715 or 10601 or 10701.
+
+    <li> You need to have, before starting this course, college-level maturity in discrete mathematics, as can be achieved at CMU by having passed 21-127 (Concepts of Mathematics) or 15-151 (Mathematical Foundations of Computer Science), or comparable courses elsewhere.
+
+    <li> You must strictly adhere to these pre-requisites! Even if CMU’s registration system does not prevent you from registering for this course, it is still your responsibility to make sure you have all of these prerequisites before you register.
+    </ul>
+    </dd>
+  
+    <dt>Course Materials</dt>
+    <dd>Homework assignments will be announced on Piazza when released. Slides will be posted periodically on the course website. The instructor will try to upload slides before class, and additional readings will be posted whenever possible. </dd>
+    </div>
+ </section>
+ <section id="projects">
+ <div class="container">
+
+  <br/>
+  <h3> Projects </h3>
+  <dt>Timeline</dt>
+
+    Oct 29: 3-page proposal on the class project <br>
+    Dec 3: Final projects are due, 8-pages 
+   <br>
+  <dt> Requirements </dt>
+  For projects, you may work in teams of 2 people. 
+
+  Project info sheet 
+  <a href = https://andrejristeski.github.io/10417-21/project.pdf>pdf</a>.
+  <br>
+  Slightly modified NeurIPS style file and example paper for latex
+  (<a href="https://deeplearning-cmu-10417.github.io/assign/nips_2016.sty">sty</a>)
+  (<a href="https://deeplearning-cmu-10417.github.io/assign/nips_2016.tex">tex</a>) and formatting guide
+  (<a href="https://deeplearning-cmu-10417.github.io/assign/nips_2016.pdf">pdf</a>) <br>
+  Please note that 8 pages is a hard upper limit on length. Grading on project will be reduced if report is over 8 pages. No exception.
+  <br> 
+  Some project abstracts from last year as references <a href = https://deeplearning-cmu-10417.github.io/abstract.pdf>abstract</a>.
+  <br>
+  <br> 
+    <h4>Assignments and Grading</h4>
+    <dd>There will be <b>three</b> assignments and a <b>final project</b> for the course whose details are mentioned above.  
+<br>    Please write all assignments in LaTeX using the NIPS style file.
+Slightly modified NIPS style file and example atex
+(<a href="https://deeplearning-cmu-10417.github.io/assign/nips_2016.sty">sty</a>)
+(<a href="https://deeplearning-cmu-10417.github.io/assign/nips_2016.tex">tex</a>)
+<br>
+<br>
+      Course grades: 
+<ul>
+<li> <b>60%</b> on 3 assignments, each worth 20%,  
+<li><b>40%</b> on Final Project (10% mid-way report, 30% final report) .</dd>
+</ul>
+      <dt> Homework Assignments </dt>
+
+	The assignments are to be done by each student individually.  You may discuss the general idea of the questions with anyone you like, but your discussion may not include the specific answers to any of the problems.
+<br>
+    <dt>Submitting Assignments</dt>
+    <dd> Assignments will be submitted through <a href="https://gradescope.com/">Gradescope</a>. Additionally, you should upload your code to Autolab. <br> Writeups should be typeset in Latex and should be submitted in pdf form. <br> All code should be submitted with a README file with instructions on how to execute your code. <br> You will receive an invite to Gradescope for 10417/10617 Intermediate Deep Learning Fall 2022. Login via the invite, and submit the assignments on time. If you have not received an invite, please post a private message on Piazza.</dd>
+
+<br>
+
+<h3>Marking</h3>
+As a general rule, small matters of marking on assignments
+(apparent errors, questions about evaluation criteria, etc.) should be taken
+first to the marker (via a Gradescope regrade request). More significant issues, or unresolved matters
+on assignments, are appropriate to take to the professor.
+Matters of marking on tests and exams should be taken to the professor.
+
+<p>
+</div>
+</section>
+<section id="policies">
+<div class="container">
+<h4 id="6-general-policies">General Policies</h4>
+<dt> Grace Day/Late Homework Policy </dt>
+Homeworks: Each student will have a total of 5 grace days that a student may choose to apply to the homework assignments. 
+No more than 3 grace days can be used on any single assignment. There will be no late days allowed for the projects (either for the proposal or final project.) </br>
+Homeworks submitted late when the student has no Grace days remaining or 3 days past the deadline will be given a score of 0.
+<br>
+
+
+<dt id="extensions">Extensions</dt>
+<p>In general, we do not grant extensions on assignments. There are several exceptions:</p>
+<ul>
+  <li><strong>Medical Emergencies:</strong> If you are sick and unable to complete an
+assignment or attend class, please go to University Health
+Services. For minor illnesses, we expect grace days or our late
+penalties to provide sufficient accommodation. For medical
+emergencies (e.g. prolonged hospitalization), students may request
+an extension afterwards and should include a note from University
+Health Services.</li>
+Certificate</b> or a <b>written</b> (not email) request submitted at least one week before the due date and approved by the instructor.  Please plan ahead.
+  <li><strong>Family/Personal Emergencies:</strong> If you have a family emergency
+(e.g. death in the family) or a personal emergency (e.g. mental
+health crisis), please contact your academic adviser or Counseling
+and Psychological Services (CaPS). In addition to offering support,
+they will reach out to the instructors for all your courses on your
+behalf to request an extension.</li>
+  <li><strong>University-Approved Absences:</strong> If you are attending an
+out-of-town university approved event (e.g. multi-day
+athletic/academic trip organized by the university), you may request
+an extension for the duration of the trip. You must provide
+confirmation of your attendance, usually from a faculty or staff
+organizer of the event.</li>
+</ul>
+
+<p>For any of the above situations, you may request an extension by emailing the Educational Associate Brynn Edmunds at bedmunds@andrew.cmu.edu
+ – do not email the instructor or TAs. The email should be sent as soon as you are aware of the conflict and at least 5 days prior to the deadline.
+ In the case of an emergency, no notice is needed.</p>
+
+<dt id="audit-policy">Audit Policy</dt>
+
+<p>Auditing of the course (i.e. taking the course for an “Audit”
+grade) is not permitted this semester.</p>
+
+<dt id="passfail-policy">Pass/Fail Policy</dt>
+
+<p>We allow you take the course as Pass/Fail. Instructor permission is
+not required. What grade is the cutoff for Pass will depend on your
+program. Be sure to check with your program / department as to whether
+you can count a Pass/Fail course towards your degree requirements.</p>
+
+<dt id="accommodations-for-students-with-disabilities">Accommodations for Students with Disabilities:</dt>
+
+<p>If you have a disability and have an accommodation letter from the Disability Resources office, I encourage 
+you to discuss your accommodations and needs with Brynn Edmunds (bedmunds@andrew.cmu.edu) as early in the semester 
+as possible. We will work with you to ensure that accommodations are provided as appropriate. If you suspect that 
+you may have a disability and would benefit from accommodations but are not yet registered with the Office of 
+Disability Resources, I encourage you to contact them at 
+<a href="mailto:access@andrew.cmu.edu">access@andrew.cmu.edu</a>.</p>
+
+<h4 id="7-academic-integrity-policies">Academic Integrity Policies</h4>
+
+<p><strong>Read this carefully!</strong></p>
+
+<p>(Adapted from Roni Rosenfeld’s <a href="http://www.cs.cmu.edu/~roni/10601/">10-601 Spring 2016</a> Course Policies.)</p>
+
+<dt id="collaboration-among-students">Collaboration among Students</dt>
+
+<ul>
+  <li>The purpose of student collaboration is to facilitate learning, not to circumvent it. Studying the material in groups is strongly encouraged. It is also allowed to seek help from other students in understanding the material needed to solve a particular homework problem, provided no written notes (including code) are shared, or are taken at that time, and provided learning is facilitated, not circumvented. The actual solution must be done by each student alone.</li>
+  <li>The presence or absence of any form of help or collaboration, whether given or received, must be explicitly stated and disclosed in full by all involved. Specifically, each assignment solution must include answering the following questions:
+    <ol>
+      <li>Did you receive any help whatsoever from anyone in solving this assignment?   Yes / No.
+        <ul>
+          <li>If you answered ‘yes’, give full details:  <strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong></li>
+          <li>(e.g. “Jane Doe explained to me what is asked in Question 3.4”)</li>
+        </ul>
+      </li>
+      <li>Did you give any help whatsoever to anyone in solving this assignment?           Yes / No.
+        <ul>
+          <li>If you answered ‘yes’, give full details: <strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong>_</li>
+          <li>(e.g. “I pointed Joe Smith to section 2.3 since he didn’t know how to proceed with Question 2”)</li>
+        </ul>
+      </li>
+      <li>Did you find or come across code or online material that implements or solves any part of this assignment ?  Yes / No.    (See below policy on “found code”)
+        <ul>
+          <li>If you answered ‘yes’, give full details: <strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong>_</li>
+          <li>(book &amp; page, URL &amp; location within the page, etc.).</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>If you gave help after turning in your own assignment and/or after answering the questions above, you must update your answers before the assignment’s deadline, if necessary by emailing the course staff.</li>
+  <li>Collaboration without full disclosure will be handled severely, in compliance with <a href="https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html">CMU’s Policy on Academic Integrity</a>.</li>
+</ul>
+
+<dt id="previously-used-assignments">Previously Used Assignments</dt>
+
+<p>Some of the homework assignments used in this class may have been used in prior versions of this class, or in classes at other institutions, or elsewhere. Solutions to them may be, or may have been, available online, or from other people or sources.  It is explicitly forbidden to use any such sources, or to consult people who have solved these problems before.  It is explicitly forbidden to search for these problems or their solutions on the internet.  You must solve the homework assignments completely on your own. We will be actively monitoring your compliance.  Collaboration with other students who are currently taking the class is allowed, but only under the conditions stated above.</p>
+
+<dt id="policy-regarding-found-code">Policy Regarding “Found Code”:</dt>
+
+<p>You are encouraged to read books and other instructional materials, both online and offline, to help you understand the concepts and algorithms taught in class. These materials may contain example code or pseudo code, which may help you better understand an algorithm or an implementation detail. However, when you implement your own solution to an assignment, you must put all materials aside, and write your code completely on your own, starting “from scratch”. Specifically, you may not use any code you found or came across. If you find or come across code that implements any part of your assignment, you must disclose this fact in your collaboration statement.</p>
+
+<dt id="duty-to-protect-ones-work">Duty to Protect One’s Work</dt>
+
+<p>Students are responsible for pro-actively protecting their work from copying and misuse by other students. If a student’s work is copied by another student, the original author is also considered to be at fault and in gross violation of the course policies. It does not matter whether the author allowed the work to be copied or was merely negligent in preventing it from being copied. When overlapping work is submitted by different students, both students will be punished.</p>
+
+<p>To protect future students, do not post your solutions publicly, neither during the course nor afterwards.</p>
+
+<dt id="penalties-for-violations-of-course-policies">Penalties for Violations of Course Policies</dt>
+
+<p>All violations (even first one) of course policies will always be
+reported to the university authorities (your Department Head,
+Associate Dean, Dean of Student Affairs, etc.) as an official Academic
+Integrity Violation and will carry severe penalties.</p>
+
+<ol>
+  <li>
+    <p>The penalty for the first violation is a one-and-a-half letter
+grade reduction. For example, if your final letter grade for the
+course was to be an A-, it would become a C+.</p>
+  </li>
+  <li>
+    <p>The penalty for the second violation is failure in the course, and
+can even lead to dismissal from the university.</p>
+  </li>
+</ol>
+
+<h3 id="8-support">Support</h3>
+
+<p>Take care of yourself.  Do your best to maintain a healthy lifestyle this semester by eating well, exercising, avoiding drugs and alcohol, getting enough sleep and taking some time to relax. This will help you achieve your goals and cope with stress.</p>
+
+<p>All of us benefit from support during times of struggle. You are not alone. There are many helpful resources available on campus and an important part of the college experience is learning how to ask for help. Asking for support sooner rather than later is often helpful.</p>
+
+<p>If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support. Counseling and Psychological Services (CaPS) is here to help: call 412-268-2922 and visit their website at <a href="http://www.cmu.edu/counseling/">http://www.cmu.edu/counseling/</a>. Consider reaching out to a friend, faculty or family member you trust for help getting connected to the support that can help.</p>
+
+<p>If you or someone you know is feeling suicidal or in danger of self-harm, call someone immediately, day or night:</p>
+
+<ul>
+  <li>CaPS: 412-268-2922</li>
+  <li>Re:solve Crisis Network: 888-796-8226</li>
+  <li>If the situation is life threatening, call the police:
+    <ul>
+      <li>On campus: CMU Police: 412-268-2323</li>
+      <li>Off campus: 911.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If you have questions about this or your coursework, please let the instructors know.</p>
+
+<hr />
+
+    <h3> Contact Information </h3>
+	<p> Email: rsalakhu [at] andrew [dot] cmu [dot] edu </p>
+	<p> Email: bedmunds [at] andrew [dot] cmu [dot] edu </p>
+
+  </div>
+  </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script> var shiftWindow = function() { scrollBy(0, -35) };
+if (location.hash) shiftWindow();
+window.addEventListener("hashchange", shiftWindow); </script>
+  </body>
+</html>
+
