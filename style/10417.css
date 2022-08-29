@@ -132,6 +132,10 @@ margin-left: 10px;
   .no-more-tables td:before { content: attr(data-title); }
 }
 
+#tableheader {
+  font-weight: bold;
+}
+
 /* Real CSS */
 h2, h3, h4 {
   color: #004653;

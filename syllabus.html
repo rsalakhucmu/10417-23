@@ -46,15 +46,344 @@
 </div>
 </div>
 
-<div class="container">
+<!-- <div class="container">
 <p>Schedule will be uploaded soon!</p>
-</div>
+</div> -->
 <!-- <div width="100%" >
 <center>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQs2KaRF_aOkB7ty1aNB9j2HCq87YRuOcitH4NThQhSUFNisoJzFC8f-Jppt1jBtIfhB0Zn3GIa_KlJ/pubhtml?gid=1383849365&amp;single=true&amp;widget=true&amp;headers=false"
    style="width:75%;height:800px;"></iframe>
 </center>
 </div> -->
+<div class="container">
+  <table id="schedule" class="table table-bordered no-more-tables">
+    <thead class="active" style="background-color:#f9f9f9">
+    <tr>
+      <th><b>Date</b></th>
+      <th><b>Event</b></th>
+      <th><b>Description</b></th>
+      <th><b>Announcements</b></th>
+      <th><b>Readings</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>August 29</td>
+      <td>Lecture 1</td>
+      <td>Machine Learning: Introduction to Machine Learning, Regression</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>August 31</td>
+      <td>Lecture 2</td>
+      <td>Machine Learning: Continue Introduction to Machine Learning, Regression</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 2</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 5</td>
+      <td>Holiday</td>
+      <td>Labor Day</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 7</td>
+      <td>Lecture 3</td>
+      <td>Probability Distributions</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 9</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 12</td>
+      <td>Lecture 4</td>
+      <td>Neural Networks 1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 14</td>
+      <td>Lecture 5</td>
+      <td>Neural Networks 1 (continued)</td>
+      <td>HW1 out</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 16</td>
+      <td>Recitation 1</td>
+      <td>Homework 1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 19</td>
+      <td>Lecture 6</td>
+      <td>Neural Networks 2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 21</td>
+      <td>Lecture 7</td>
+      <td>Convolutional Neural Networks 1</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 23</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 26</td>
+      <td>Lecture 8</td>
+      <td>Convolutional Neural Networks 2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 28</td>
+      <td>Lecture 9</td>
+      <td>Convolutional Neural Networks 2 (continued)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>September 30</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 3</td>
+      <td>Lecture 10</td>
+      <td>Unsupervised Learning: Directed Graphical Models</td>
+      <td>HW1 due</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 5</td>
+      <td>Lecture 11</td>
+      <td>Undirected Graphical Models and Markov Random Fields (MRF)</td>
+      <td>HW2 out</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 7</td>
+      <td>Recitation 2</td>
+      <td>Homework 2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 10</td>
+      <td>Lecture 12</td>
+      <td>Restricted Boltzmann Machines</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 12</td>
+      <td>Lecture 13</td>
+      <td>Deep Belief Networks</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 14</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 17</td>
+      <td>Holiday</td>
+      <td>Fall break</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 19</td>
+      <td>Holiday</td>
+      <td>Fall break</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 21</td>
+      <td>Holiday</td>
+      <td>Fall break</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 24</td>
+      <td>Lecture 14</td>
+      <td>Autoencoders/Sparse Coding Models</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 26</td>
+      <td>Lecture 15</td>
+      <td>Language Modelling</td>
+      <td>HW2 due</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 28</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>October 31</td>
+      <td>Lecture 16</td>
+      <td><span style="font-weight:normal">Sequence to Sequence Models 1, RNNs</span></td>
+      <td>Midway Report due</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 2</td>
+      <td>Lecture 17</td>
+      <td><span style="font-weight:normal">Sequence to Sequence Models 2, advanced models</span></td>
+      <td>HW3a out</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 4</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 7</td>
+      <td>Lecture 18</td>
+      <td><span style="font-weight:normal">Variational Inference </span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 9</td>
+      <td>Lecture 19</td>
+      <td>Variational Autoencoders </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 11</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 14</td>
+      <td>Lecture 20</td>
+      <td>Generative Adversarial Networks, Normalizing Flows</td>
+      <td>HW3a due</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 16</td>
+      <td>Lecture 21</td>
+      <td>Graph Neural Networks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>HW3b out</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 18</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 21</td>
+      <td>Lecture 22</td>
+      <td><span style="font-weight:normal">Multi-Modal Learning</span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 23</td>
+      <td>Holiday</td>
+      <td>Thanksgiving</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 25</td>
+      <td>Holiday</td>
+      <td>Thanksgiving</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 28</td>
+      <td>Lecture 23</td>
+      <td><span style="font-weight:normal">Representation Learning for Reading Comprehension</span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>November 30</td>
+      <td>Lecture 24</td>
+      <td>Introduction to Reinforcement Learning</td>
+      <td>HW3b due</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>December 2</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>December 5</td>
+      <td>Lecture 25</td>
+      <td><span style="font-weight:normal">Embodied AI: Language and Perception	</span></td>
+      <td>Final Report Due</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>December 7</td>
+      <td>Lecture 26</td>
+      <td><span style="font-weight:normal">Integrating Domain-Knowledge into Deep Learning</span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>December 9</td>
+      <td>-</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+  </table>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
